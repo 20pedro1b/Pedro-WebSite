@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja de Caminhões e Carretas</title>
+
+<style>
+
+body{
+background-color:#111111;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:20px;
+}
+
+header{
+background-color:#1b1b1b;
+color:#ff9900;
+text-align:center;
+max-width:1000px;
+margin:0 auto;
+padding:20px;
+border:4px solid #ff9900;
+}
+
+header p{
+color:white;
+}
+
+main{
+background-color:#f4efe6;
+max-width:1000px;
+margin:0 auto;
+padding:20px;
+}
+
+article{
+display:flex;
+gap:30px;
+margin-bottom:40px;
+border-bottom:2px solid #ff9900;
+padding-bottom:30px;
+}
+
+img{
+width:320px;
+height:320px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.artigo-autor{
+font-weight:bold;
+}
+
+h2{
+font-size:40px;
+}
+
+button{
+padding:10px 15px;
+margin-right:10px;
+margin-top:10px;
+cursor:pointer;
+background-color:#f4efe6;
+border:2px solid #ff9900;
+color:#000000;
+border-radius:10px;
+transition:0.3s;
+}
+
+button:hover{
+background-color:#ff9900;
+color:white;
+}
+
+footer{
+background-color:#1b1b1b;
+color:#ff9900;
+text-align:center;
+max-width:1000px;
+margin:0 auto;
+padding:20px;
+font-size:22px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🚛 Loja Truck Master</h1>
+
+<p>
+Os melhores caminhões e carretas do Brasil
+</p>
+
+</header>
+
+<main>
+
+<article>
+
+<img src="download.jpg"
+alt="Caminhão moderno">
+
+<div>
+
+<h2>Tabela de Caminhões</h2>
+
+<p class="artigo-autor">
+Por: Pedro
+</p>
+
+<p>
+🚛 Volvo FH 540 - R$ 890.000
+</p>
+
+<p>
+🚛 Scania R450 - R$ 760.000
+</p>
+
+<p>
+🚛 Mercedes Actros - R$ 810.000
+</p>
+
+<p>
+🚛 DAF XF - R$ 720.000
+</p>
+
+<button class="like">👍 <span>0</span></button>
+<button class="deslike">👎 <span>0</span></button>
+
+</div>
+
+</article>
+
+<article>
+
+<img src="download-_1_.jpg"
+alt="Carreta de transporte">
+
+<div>
+
+<h2>Tabela de Carretas</h2>
+
+<p class="artigo-autor">
+Por: Pedro
+</p>
+
+<p>
+🚚 Carreta Graneleira - R$ 180.000
+</p>
+
+<p>
+🚚 Carreta Baú - R$ 220.000
+</p>
+
+<p>
+🚚 Carreta Tanque - R$ 260.000
+</p>
+
+<p>
+🚚 Carreta Prancha - R$ 310.000
+</p>
+
+<button class="like">👍 <span>0</span></button>
+<button class="deslike">👎 <span>0</span></button>
+
+</div>
+
+</article>
+
+</main>
+
+<footer>
+
+🏎️ "Potência e qualidade para sua estrada."
+
+</footer>
+
+<script>
+
+const likes=document.querySelectorAll(".like");
+const deslikes=document.querySelectorAll(".deslike");
+
+likes.forEach(function(botao){
+
+let curtido=false;
+
+botao.addEventListener("click",function(){
+
+let texto=botao.querySelector("span");
+let numero=Number(texto.textContent);
+
+if(!curtido){
+
+texto.textContent=numero+1;
+curtido=true;
+
+}else{
+
+texto.textContent=numero-1;
+curtido=false;
+
+}
+
+});
+
+});
+
+deslikes.forEach(function(botao){
+
+let descurtido=false;
+
+botao.addEventListener("click",function(){
+
+let texto=botao.querySelector("span");
+let numero=Number(texto.textContent);
+
+if(!descurtido){
+
+texto.textContent=numero+1;
+descurtido=true;
+
+}else{
+
+texto.textContent=numero-1;
+descurtido=false;
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
